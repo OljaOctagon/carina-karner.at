@@ -97,7 +97,7 @@ vec4 trace(vec3 ray) {
         materialColor = hit.rgb;
     }
 
-    if (distance>far) {materialColor = vec3(0.01);}
+    if (distance>far) {materialColor = vec3(1.);}
     return vec4(materialColor, distance);
 }
 
