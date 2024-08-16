@@ -2,7 +2,7 @@
   <div>
     <fixed-background>
       <div>    
-        <h1>ungut.at</h1>
+        <h1>carina-karner.at</h1>
         <slot />
       </div>
       <template #background>
