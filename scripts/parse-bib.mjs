@@ -1,4 +1,4 @@
-import { readFileSync, writeFileSync, existsSync } from 'fs'
+import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'fs'
 import { resolve, dirname } from 'path'
 import { fileURLToPath } from 'url'
 import { parse } from '@retorquere/bibtex-parser'
@@ -82,5 +82,6 @@ const publications = library.entries
   }))
   .sort((a, b) => Number(b.year) - Number(a.year))
 
+mkdirSync(dirname(outPath), { recursive: true })
 writeFileSync(outPath, JSON.stringify(publications, null, 2))
 console.log(`Parsed ${publications.length} publications from publications.bib → src/content/publications.json`)
