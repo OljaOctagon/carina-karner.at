@@ -1,12 +1,11 @@
 <template>
-  <div class="projects">
-    <h1>Projects</h1>
+  <div class="blog-post">
     <ContentDoc />
   </div>
 </template>
 
 <style lang="scss" scoped>
-.projects :deep(article) {
+.blog-post :deep(article) {
   margin-bottom: var(--spacing-2xl);
 }
 </style>
